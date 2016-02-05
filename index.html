@@ -22,7 +22,7 @@
 </div>
 <div class="container">
 	<h3>Objective</h3>
-	<p>Take the 11 3D-printed pieces and manipulate them into a cube. The pieces without scaling print a 2 x 2 x 2 inch cube. It is easiest to think of it as 4 “units” make an edge of the cube.</p>
+	<p>Take the 11 3D-printed pieces and manipulate them into a cube. The pieces, without scaling, print a 2 x 2 x 2 inch cube. It is easiest to think of it as 4 “units” make an edge of the cube.</p>
 	<img class="fullWidthImage" src="images/box-fly-apart.png">
 	<h3>Print your own</h3>
 	<h4>Downloads</h5>
@@ -41,7 +41,7 @@
 	</ul>
 	<h3>Digital Prototype</h3>
 		<p>I tried my mobile friends but this works best in WebGL enabled browsers with a mouse. It may be possible on mobile but the experience was not as nice.</p>
-		<p> Click and drag a piece to move it click and drag the surrounding area to rotate the view. Scroll to zoom.</p>
+		<p> Click and drag a piece to move it. Click and drag the surrounding area to rotate the view. Scroll to zoom.</p>
 		<p><a href="/box/fullscreen.html">Full Screen Here</a></p>
 		<div id="canvasContainer" class="smaller"></div>
 		<p>The code for this example and website can be found <a href="https://github.com/SWhelan/box/tree/gh-pages">here</a>.</p>
@@ -52,13 +52,13 @@
 			<p>While printing <a href="https://www.hovalin.com">this</a> I had a bit of time on my hands in front of a few 3D printers. I have printed some designs off the internet in the past and thought it was time I made something of my own. Puzzles are fun for me and I thought it would be something easy to start off with.</p>
 		<h4>Tools</h4>
 			<p>Ended up using google sketch-up to create the pieces but needed <a href="https://extensions.sketchup.com/en/content/sketchup-stl">this extension</a> to get printable stl files.</p>
-			<p><a href="https://engineering.case.edu/thinkbox/">Case Western Reserve University think[box]'s</a> is a great maker space open to the public in Cleveland Ohio. I used one of their <a href="https://store.makerbot.com/replicator2.html">MakerBot Replicator 2</a> printers to print the pieces. As I wanted all my pieces to be different colors I used fillament which <a href="https://engineering.case.edu/thinkbox/equipment/3dprinter/makerbotreplicator2">they provide</a> for a small cost. As an undergraduate student I ended up paying $10.20 for all of the filament I used.</p>
+			<p><a href="https://engineering.case.edu/thinkbox/">Case Western Reserve University think[box]'s</a> is a great maker space open to the public in Cleveland Ohio. I used one of their <a href="https://store.makerbot.com/replicator2.html">MakerBot Replicator 2</a> printers to print the pieces. As I wanted all my pieces to be different colors I used filament which <a href="https://engineering.case.edu/thinkbox/equipment/3dprinter/makerbotreplicator2">they provide</a> for a small cost. As an undergraduate student I ended up paying $10.20 for all of the filament I used.</p>
 		<h4>Digital Version</h4>
-			<p>While probably an unecessary step I am a CS major and it just felt weird to have a project without any coding involved. <a href="http://threejs.org/">three.js</a> is a library I have been wanted to try out for a while and I was not dissapointed. Mostly I followed <a href="http://threejs.org/examples/#webgl_interactive_draggablecubes">this example</a> but the tricky part was actually getting the models into three.js as I didn’t want to recreate the models in code when I had them in reasonable files already and they may change and it would be easier to generate new files.</p>
+			<p>While probably an unnecessary step I am a CS major and it just felt weird to have a project without any coding involved. <a href="http://threejs.org/">three.js</a> is a library I have been wanted to try out for a while and I was not disappointed. Mostly I followed <a href="http://threejs.org/examples/#webgl_interactive_draggablecubes">this example</a> but the tricky part was actually getting the models into three.js as I didn’t want to recreate the models in code when I had them in reasonable files already and they may change and it would be easier to generate new files.</p>
 			<p>I attempted to use three.js’ Collada loader and exporting to dae from Google Sketchup but it seemed like not all of the required material and model properties were not getting exported so the final solution was something similar to <a href="http://www.jonathan-petitcolas.com/2015/07/27/importing-blender-modelized-mesh-in-threejs.html">this blog post</a>. Ended up needing to install this <a href="https://github.com/mrdoob/three.js/tree/master/utils/exporters/blender">blender to three.js exporter</a>. Long story short: Google Sketchup &gt; STL file &gt; Blender &gt; three.js json file &gt; JSONLoader &gt; draggable cubes example. Javascript for this puzzle is <a href="https://github.com/SWhelan/box/blob/gh-pages/javascripts/box.js">here</a>.</p>
 			<p>I attempted to map touch events to the mouse event handlers but it seems there are still a few bugs that I will need to work out in the future.</p>
 	<h3>About this project’s creator</h3>
-	<p>Sarah Whelan is a Computer Science major at Case Western Reserve University graduating in Decemeber 2016.</p>
+	<p>Sarah Whelan is a Computer Science major at Case Western Reserve University graduating in December 2016.</p>
 	<p>She likes puzzles and making things. Feel free to reach out about this project, CS, or anything really:</p>
 	<p>
 		<a href="https://www.github.com/swhelan">github</a>
