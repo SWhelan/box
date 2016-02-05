@@ -1,0 +1,61 @@
+body {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: large;
+	color: #333333;
+}
+
+h1, h4 {
+	color: red;
+}
+
+::-moz-selection { 
+	background: #cccccc;
+}
+::selection {
+	background: #cccccc;
+}
+
+.container {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.fullWidthImage {
+	width: 100%;
+}
+
+a.header {
+	text-decoration: none;
+}
+
+@media screen and (max-width: 720px) {
+    .container {
+        width: 100%;
+    }
+	
+	.solutionImage {
+		width: 100%;
+	}
+	
+	body {
+		text-align: justify;
+		text-justify: inter-word;
+	}
+}
+
+.red {
+	color: red;
+}
+
+a {
+	color: red;
+}
+
+a:hover, a:active {
+	color: darkred;
+}
+
+a:visited {
+	color: Maroon;
+}

@@ -1,4 +1,4 @@
-var container;
+var container = document.getElementById("canvasContainer");
 var camera;
 var controls;
 var scene;
@@ -34,7 +34,6 @@ for(var i = 1; i <= NUM_PIECES; i++){
 }
 
 function init(){
-    addContainer();
     addCamera();
     addScene();    
     addLight();
@@ -49,16 +48,11 @@ function init(){
  * http://threejs.org/examples/#webgl_interactive_draggablecubes
  */
  
- function addContainer(){
-    container = document.createElement('div');
-    document.body.appendChild(container);
- }
-
 function addCamera(){
     camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 1000);
     camera.position.z = 100;
     camera.position.y = 40;
-    controls = new THREE.TrackballControls(camera);
+    controls = new THREE.TrackballControls(camera, container);
     controls.rotateSpeed = 1.0;
     controls.zoomSpeed = 1.2;
     controls.panSpeed = 0.8;
@@ -105,12 +99,19 @@ function addRenderer(){
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setClearColor(0xf0f0f0);
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
+	setRendererSize();
     renderer.sortObjects = false;
-
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFShadowMap;
     container.appendChild(renderer.domElement);
+}
+
+function setRendererSize(){
+	if(container.className == "smaller"){
+		renderer.setSize((window.innerWidth - 10)* .6, (window.innerHeight  - 10)* .6);
+	} else {
+		renderer.setSize(window.innerWidth - 10, window.innerHeight - 10);
+	}
 }
 
 function addEventListeners(){
@@ -130,7 +131,7 @@ function addEventListeners(){
 function onWindowResize(){
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    setRendererSize();
 }
 
 function onDocumentMouseMove(event){
